@@ -10,32 +10,19 @@ function App() {
   const [commitMessage, setCommitMessage] = useState('');
   const [output, setOutput] = useState('');
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
   const runCommand = async (command) => {
     try {
       let result;
 
       if (command === 'commit') {
-        result = await Command.create('exec-git', ['commit', '-am', commitMessage]);
-        await invoke('type_command', { command: 'git commit -am ' + commitMessage });
+        await invoke('type_command', { command: 'git commit -am "' + commitMessage + '"'});
       } else if (command === 'add') {
-        result = await Command.create('exec-git', ['add', '.']);
         await invoke('type_command', { command: 'git add .' });
       } else if (command === 'push') {
-        result = await Command.create('exec-git', ['push']);
         await invoke('type_command', { command: 'git push' });
       } else if (command === 'status') {
-        result = await Command.create('exec-git', ['status']);
         await invoke('type_command', { command: 'git status' });
       }
-
-      console.log('result', result);
-
-      setOutput(result.args?.join(' '));
     } catch (error) {
       setOutput(error.toString());
     }
