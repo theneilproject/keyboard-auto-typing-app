@@ -3,12 +3,20 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import { Command } from "@tauri-apps/plugin-shell";
 import "./App.css";
+import CommandButton from "./components/CommandButton.jsx";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
   const [commitMessage, setCommitMessage] = useState('');
   const [output, setOutput] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async (command) => {
+    await navigator.clipboard.writeText(command);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   const runCommand = async (command) => {
     try {
@@ -32,16 +40,17 @@ function App() {
   return (
     <main className="container">
       <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">Git Commander</h1>
+        <h1 className="text-2xl font-bold mb-4">Commander</h1>
 
         <div className="space-y-4">
           <div className="flex gap-2">
-            <button
+            <CommandButton
+              // className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
               onClick={() => runCommand('status')}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              git status
-            </button>
+              command="git status"
+              text="git status"
+              color="blue"
+            />
 
             <button
               onClick={() => runCommand('add')}
