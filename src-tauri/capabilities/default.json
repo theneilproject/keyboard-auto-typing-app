@@ -24,6 +24,17 @@
       ]
     },
     {
+      "identifier": "shell",
+      "allow": [
+        {
+          "name": "exec-git",
+          "cmd": "git",
+          "args": true,
+          "sidecar": true
+        }
+      ]
+    },
+    {
       "identifier": "shell:allow-execute",
       "allow": [
         {
@@ -36,12 +47,19 @@
             }
           ],
           "sidecar": false
+        },
+        {
+          "name": "exec-git",
+          "cmd": "git",
+          "args": true,
+          "sidecar": true
         }
       ]
     },
     "fs:default",
     "dialog:default",
-    "shell:default"
+    "shell:default",
+    "enigo::default"
   ],
   "capabilities": []
 }
