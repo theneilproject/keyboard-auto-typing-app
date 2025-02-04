@@ -1,7 +1,8 @@
 ﻿import { Copy } from "lucide-react";
 import {useEffect, useState} from "react";
+import HoverPopoverWidget from "@/components/widgets/HoverPopoverWidget.jsx";
 
-const CommandButton = ({ onClick, onCopy, command, text, color = "blue", disabled = false}) => {
+const CommandButton = ({ onClick, onCopy, command, text, detail, color = "blue", disabled = false}) => {
   const [copied, setCopied] = useState(false);
   const [inputValues, setInputValues] = useState({});
   const placeholderRegex = /\^\{([a-zA-Z0-9]+)}/g;
@@ -49,13 +50,20 @@ const CommandButton = ({ onClick, onCopy, command, text, color = "blue", disable
 
   return (
     <div className="command-button-container">
-      <button
-        onClick={onClick}
-        disabled={disabled}
-        className={`command-button left-button ${buttonColors[color]}`}
-      >
-        {text}
-      </button>
+      <HoverPopoverWidget
+        trigger={
+          <button
+            onClick={onClick}
+            disabled={disabled}
+            className={`command-button left-button ${buttonColors[color]}`}
+          >
+            {text}
+          </button>
+        }
+        content={<div className="command-description"><p>{detail}</p></div>}
+      />
+
+
       <div className={`command-input-container ${buttonColors[color]}`}>
         {uniquePlaceholders.length > 0 && (
           <div className="inputs-container">

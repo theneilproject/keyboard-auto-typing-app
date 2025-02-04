@@ -1,0 +1,31 @@
+﻿.hover-popover-widget {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    /* popover 컨테이너와 연결된 버튼 height 꽉 채우기 */
+    & > div:nth-child(1) {
+        height: 100%;
+    }
+
+    .popover-container {
+        z-index: 50;
+        background-color: #ffffff;
+        border-radius: 0.25rem;    /* rounded-lg는 8px와 동일 */
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);  /* shadow-lg */
+        border: 1px solid #e5e7eb;  /* border와 border-gray-200 */
+    }
+
+
+    button {
+        height: 100%;
+        width: 100%;
+    }
+
+    p {
+        font-family: 'NanumGothic', sans-serif;
+        padding: 0.05rem 0.5rem;
+        font-size: 0.8125rem;
+        margin: 0;
+    }
+}
