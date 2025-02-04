@@ -28,7 +28,7 @@ body {
     height: 100%;
     min-height: 100vh;
 
-    font-family: 'Apple SD Gothic Neo', 'NanumGothic', sans-serif;
+    font-family: 'NanumGothic', 'Apple SD Gothic Neo', 'SuiGeneris', sans-serif;
 
     a {
         text-decoration: none;
