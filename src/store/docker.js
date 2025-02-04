@@ -15,6 +15,12 @@ export const dockerCommands = [
         detail: '이미지 목록을 보여줍니다.'
       },
       {
+        id: 21231,
+        name: 'volume ls',
+        command: 'docker volume ls',
+        detail: '볼륨 목록을 보여줍니다.'
+      },
+      {
         id: 2124,
         name: 'compose up',
         command: 'docker compose up',
