@@ -22,6 +22,18 @@ export const dockerCommands = [
       },
       {
         id: 21232,
+        name: 'network ls',
+        command: 'docker network ls',
+        detail: '네트워크 목록을 보여줍니다.'
+      },
+      {
+        id: 21233,
+        name: 'network create',
+        command: 'docker network create ^{networkName}',
+        detail: '네트워크를 생성합니다.'
+      },
+      {
+        id: 21232,
         name: 'pull',
         command: 'docker pull ^{imageName}',
         detail: '이미지를 다운로드합니다.'
