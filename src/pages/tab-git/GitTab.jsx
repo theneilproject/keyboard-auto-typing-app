@@ -5,8 +5,6 @@ import ContentLayout from "@/components/layouts/ContentLayout.jsx";
 import {routes} from "@/routes/rootConfig.js";
 
 const GitTab = () => {
-  const [commitMessage, setCommitMessage] = useState('');
-
   const runCommand = async (command) => {
     try {
       console.log('command', command);

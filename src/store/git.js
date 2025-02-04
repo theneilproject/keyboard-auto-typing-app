@@ -9,6 +9,12 @@
         detail: '스테이징 영역에 변경사항을 추가합니다.'
       },
       {
+        id: 21221,
+        name: 'status',
+        command: 'git status',
+        detail: '작업 디렉토리의 상태를 확인합니다.'
+      },
+      {
         id: 2122,
         name: 'commit',
         command: 'git commit -m "^{message}"',
