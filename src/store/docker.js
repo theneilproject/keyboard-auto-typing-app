@@ -48,7 +48,19 @@ export const dockerCommands = [
         id: 2124,
         name: 'compose up',
         command: 'docker compose up',
-        detail: 'docker-compose로 컨테이너를 실행합니다.'
+        detail: 'docker-compose로 컨테이너를 실행+로깅 합니다.'
+      },
+      {
+        id: 21241,
+        name: 'compose up -d',
+        command: 'docker compose up -d',
+        detail: 'docker-compose로 컨테이너를 백그라운드로 실행합니다.'
+      },
+      {
+        id: 21242,
+        name: 'compose up -d {service}',
+        command: 'docker compose up -d ^{service}',
+        detail: 'docker-compose로 특정 서비스를 백그라운드로 실행합니다.'
       },
       {
         id: 2125,
