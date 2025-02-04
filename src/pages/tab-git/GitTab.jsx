@@ -1,36 +1,43 @@
-﻿import CommandButton from "../../components/CommandButton.jsx";
+﻿import CommandButton from "@/components/tokens/CommandButton.jsx";
 import {invoke} from "@tauri-apps/api/core";
 import {useState} from "react";
+import ContentLayout from "@/components/layouts/ContentLayout.jsx";
+import {routes} from "@/routes/rootConfig.js";
 
 const GitTab = () => {
   const [commitMessage, setCommitMessage] = useState('');
 
   const runCommand = async (command) => {
     try {
-      if (command === 'commit') {
-        await invoke('type_command', { command: 'git commit -am "' + commitMessage + '"'});
-      } else if (command === 'add') {
-        await invoke('type_command', { command: 'git add .' });
-      } else if (command === 'push') {
-        await invoke('type_command', { command: 'git push' });
-      } else if (command === 'status') {
-        await invoke('type_command', { command: 'git status' });
-      }
+      console.log('command', command);
+        // await invoke('type_command', { command: 'git commit -am "' + commitMessage + '"'});
     } catch (error) {
     }
   };
 
   return (
-    <div>
-      <CommandButton
-        // className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        onClick={() => runCommand('status')}
-        command="git status"
-        text="git status"
-        color="blue"
-      />
+    <ContentLayout>
+      {routes?.map(({name, commands}) => {
+        if (name === 'git') {
+          console.log('commands', commands);
 
-    </div>
+          return commands?.commands?.map(({id, name, command, detail}) => {
+            // console.log('id', id);
+            // console.log('name', name);
+            // console.log('command', command);
+            // console.log('detail', detail);
+
+            return <CommandButton
+              key={id}
+              onClick={() => runCommand(name)}
+              command={command}
+              text={name}
+              color="blue"
+            />
+          });
+        }
+      })}
+    </ContentLayout>
   );
 };
 

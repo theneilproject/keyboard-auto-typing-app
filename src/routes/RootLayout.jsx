@@ -1,10 +1,10 @@
 ﻿import {Outlet} from "react-router";
-import LeftSidebarTypeTab from "@/components/layouts/LeftSidebarTypeTab.jsx";
+import LeftSidebarTypeTabLayout from "@/components/layouts/LeftSidebarTypeTabLayout.jsx";
 
 const RootLayout = () => {
   return (
     <div>
-      <LeftSidebarTypeTab />
+      <LeftSidebarTypeTabLayout />
       <Outlet />
     </div>
   );

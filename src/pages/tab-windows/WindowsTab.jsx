@@ -1,6 +1,6 @@
 ﻿import ContentLayout from "@/components/layouts/ContentLayout.jsx";
 
-const DockerTab = () => {
+const WindowsTab = () => {
   return (
     <ContentLayout>
 
@@ -8,4 +8,4 @@ const DockerTab = () => {
   );
 };
 
-export default DockerTab;
+export default WindowsTab;

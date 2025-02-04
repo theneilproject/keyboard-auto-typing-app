@@ -1,1 +1,32 @@
-﻿@import 'layouts/left-sidebar-type-tab.css';
+﻿@import 'variables.css';
+@import 'layouts/left-sidebar-type-tab.css';
+@import 'layouts/content-layout.css';
+@import 'tokens/command-button-container.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    input:focus-visible {
+        outline: none;
+        outline-offset: 0;
+    }
+}
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}

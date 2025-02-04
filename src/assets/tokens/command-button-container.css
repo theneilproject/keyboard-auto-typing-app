@@ -1,0 +1,109 @@
+﻿/* 컨테이너: 두 버튼을 옆으로 배치 */
+.command-button-container {
+    display: flex;
+
+    /* 기본 버튼 스타일 */
+
+    .command-button,
+    .copy-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease, opacity 0.2s ease;
+    }
+
+    /* 좌측 버튼 (명령 실행 버튼)의 둥근 모서리 */
+
+    .left-button {
+        flex: 1;
+    }
+
+    /* 우측 버튼 (복사 버튼)의 둥근 모서리 */
+
+    .right-button {
+    }
+
+    /* 색상별 스타일 (좌측 버튼) */
+    /* blue */
+
+    .blue {
+        background-color: #3b82f6; /* blue-500 */
+    }
+
+    .blue:hover {
+        background-color: #2563eb; /* blue-600 */
+    }
+
+    /* green */
+
+    .green {
+        background-color: #10b981; /* green-500 */
+    }
+
+    .green:hover {
+        background-color: #059669; /* green-600 */
+    }
+
+    /* yellow */
+
+    .yellow {
+        background-color: #f59e0b; /* yellow-500 */
+    }
+
+    .yellow:hover {
+        background-color: #d97706; /* yellow-600 */
+    }
+
+    /* purple */
+
+    .purple {
+        background-color: #8b5cf6; /* purple-500 */
+    }
+
+    .purple:hover {
+        background-color: #7c3aed; /* purple-600 */
+    }
+
+    /* 복사 버튼 기본 스타일 (클릭 전) */
+
+    .copy-button {
+        background-color: #6b7280; /* gray-500 */
+    }
+
+    .copy-button:hover {
+        opacity: 0.9;
+    }
+
+    /* 복사 후 복사 버튼 스타일 */
+
+    .copy-button.copied {
+        background-color: #10b981; /* green-500 */
+    }
+
+    /* 비활성화 상태 */
+
+    .command-button:disabled,
+    .copy-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    /* 입력 필드 컨테이너 */
+
+    .inputs-container {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    /* 입력 필드 스타일 */
+
+    .command-input {
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+}

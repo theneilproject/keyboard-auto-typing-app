@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import { Command } from "@tauri-apps/plugin-shell";
 import "./App.css";
-import CommandButton from "./components/CommandButton.jsx";
+import CommandButton from "./components/tokens/CommandButton.jsx";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
