@@ -10,6 +10,10 @@ const PageTabContentLayout = ({contentName}) => {
     } catch (error) {
     }
   };
+  
+  // todo : 1. Enter 입력이 들어오면, 다음 Command가 자동 복사되도록 처리(다음 커맨드가 없으면 처리하지 않음)
+  // todo : 2. Command Button에 마우스를 올리면, 자동으로 특정 Command 설명 내용이 뜨도록 처리
+  // todo : 3. 같은 Command 내부에서도 서로 다른 Command를 구분해서 실행되도록 처리
 
   return (
     <ContentLayout>
