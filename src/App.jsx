@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "./assets/icons/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import { Command } from "@tauri-apps/plugin-shell";
 import "./App.css";
