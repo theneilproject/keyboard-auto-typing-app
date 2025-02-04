@@ -1,10 +1,8 @@
-﻿import ContentLayout from "@/components/layouts/ContentLayout.jsx";
+﻿import PageTabContentLayout from "@/components/custom/PageTabContentLayout.jsx";
 
 const TauriTab = () => {
   return (
-    <ContentLayout>
-
-    </ContentLayout>
+    <PageTabContentLayout contentName="tauri" />
   );
 };
 
