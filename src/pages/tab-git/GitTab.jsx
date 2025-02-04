@@ -3,7 +3,7 @@
 const GitTab = () => {
 
 
-  return (<PageTabContentLayout contentName="git" />);
+  return (<PageTabContentLayout routeName="git" />);
 };
 
 export default GitTab;

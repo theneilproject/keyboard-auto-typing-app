@@ -2,7 +2,7 @@
 
 const WindowsTab = () => {
   return (
-    <PageTabContentLayout contentName="windows" />
+    <PageTabContentLayout routeName="windows" />
   );
 };
 

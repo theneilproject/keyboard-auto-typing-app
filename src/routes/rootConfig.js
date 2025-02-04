@@ -1,6 +1,8 @@
 ﻿import {lazy} from 'react';
 import {gitCommands} from "@/store/git.js";
 import {dockerCommands} from "@/store/docker.js";
+import {windowsCommands} from "@/store/windows.js";
+import {tauriCommands} from "@/store/tauri.js";
 
 export const routes = [
   {
@@ -24,13 +26,15 @@ export const routes = [
     name: 'tauri',
     path: 'tauri',
     fullPath: '/tauri',
-    component: lazy(() => import('@/pages/tab-tauri/TauriTab.jsx'))
+    component: lazy(() => import('@/pages/tab-tauri/TauriTab.jsx')),
+    commands: tauriCommands.filter(t => t.name === 'tauri' && t.commands)[0]
   },
   {
     id: 1124,
     name: 'windows',
     path: 'windows',
     fullPath: '/windows',
-    component: lazy(() => import('@/pages/tab-windows/WindowsTab.jsx'))
+    component: lazy(() => import('@/pages/tab-windows/WindowsTab.jsx')),
+    commands: windowsCommands.filter(w => w.name === 'task' && w.commands)[0]
   }
 ]

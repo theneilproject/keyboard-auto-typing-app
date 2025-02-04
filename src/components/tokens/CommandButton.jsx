@@ -10,9 +10,9 @@ const CommandButton = ({ onClick, onCopy, command, text, color = "blue", disable
 
   useEffect(() => {
     if (!placeholders || placeholders.length === 0) return
-    console.log('command', command)
-    console.log('placeholders', placeholders)
-    console.log('uniquePlaceholders', uniquePlaceholders)
+    // console.log('command', command)
+    // console.log('placeholders', placeholders)
+    // console.log('uniquePlaceholders', uniquePlaceholders)
     const initialValues = {};
     uniquePlaceholders.forEach((placeholder) => {
       initialValues[placeholder] = "";
@@ -60,7 +60,7 @@ const CommandButton = ({ onClick, onCopy, command, text, color = "blue", disable
         {uniquePlaceholders.length > 0 && (
           <div className="inputs-container">
             {uniquePlaceholders.map((key) => {
-              console.log('key', key);
+              // console.log('key', key);
               return (
                 <div key={key} className="input-group">
                   <input

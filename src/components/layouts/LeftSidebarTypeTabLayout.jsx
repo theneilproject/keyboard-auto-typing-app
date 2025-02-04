@@ -6,7 +6,7 @@ const LeftSidebarTypeTabLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log('url', location.pathname);
+    // console.log('url', location.pathname);
   }, [location]);
 
   return (

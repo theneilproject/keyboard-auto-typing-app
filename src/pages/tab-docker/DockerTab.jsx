@@ -2,7 +2,7 @@
 
 const DockerTab = () => {
   return (
-    <PageTabContentLayout contentName="docker" />
+    <PageTabContentLayout routeName="docker" />
   );
 };
 

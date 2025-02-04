@@ -1,4 +1,4 @@
-﻿const windowsCommands = [
+﻿export const windowsCommands = [
   {
     name: 'task',
     commands: [
@@ -13,6 +13,16 @@
         name: 'taskkill',
         command: 'taskkill /pid ^{sthtask}',
         detail: '특정 프로세스를 강제로 종료합니다.'
+      }
+    ]
+  },
+  {
+    name: 'netstat',
+    commands: [
+      {
+        id: 212211,
+        name: '-ano',
+        command: 'netstat -ano | findstr "^{sthport}"',
       }
     ]
   }

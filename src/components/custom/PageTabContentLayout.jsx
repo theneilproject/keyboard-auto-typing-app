@@ -2,10 +2,10 @@
 import {routes} from "@/routes/rootConfig.js";
 import CommandButton from "@/components/tokens/CommandButton.jsx";
 
-const PageTabContentLayout = ({contentName}) => {
+const PageTabContentLayout = ({routeName, contentName}) => {
   const runCommand = async (command) => {
     try {
-      console.log('command', command);
+      // console.log('command', command);
       // await invoke('type_command', { command: 'git commit -am "' + commitMessage + '"'});
     } catch (error) {
     }
@@ -19,7 +19,7 @@ const PageTabContentLayout = ({contentName}) => {
   return (
     <ContentLayout>
       {routes?.map(({name, commands}) => {
-        if (name === contentName) {
+        if (name === routeName) {
           console.log('commands', commands);
 
           return commands?.commands?.map(({id, name, command, detail}) => {

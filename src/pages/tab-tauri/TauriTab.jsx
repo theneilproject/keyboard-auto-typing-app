@@ -2,7 +2,7 @@
 
 const TauriTab = () => {
   return (
-    <PageTabContentLayout contentName="tauri" />
+    <PageTabContentLayout routeName="tauri" />
   );
 };
 
