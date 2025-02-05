@@ -1,3 +1,4 @@
 ﻿body {
     --kata-sidebar-width: 6rem;
+    --kata-content-min-width: 40rem;
 }

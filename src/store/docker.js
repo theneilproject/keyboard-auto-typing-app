@@ -21,7 +21,7 @@ export const dockerCommands = [
         detail: '볼륨 목록을 보여줍니다.'
       },
       {
-        id: 21232,
+        id: 212321,
         name: 'network ls',
         command: 'docker network ls',
         detail: '네트워크 목록을 보여줍니다.'
@@ -33,7 +33,7 @@ export const dockerCommands = [
         detail: '네트워크를 생성합니다.'
       },
       {
-        id: 21232,
+        id: 2123211,
         name: 'pull',
         command: 'docker pull ^{imageName}',
         detail: '이미지를 다운로드합니다.'

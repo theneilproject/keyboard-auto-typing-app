@@ -1,8 +1,7 @@
-﻿import {routes} from "@/routes/rootConfig.js";
-import {useEffect} from "react";
+﻿import {useEffect} from "react";
 import {NavLink, useLocation} from "react-router-dom";
 
-const LeftSidebarTypeTabLayout = () => {
+const LeftSidebarTypeTabLayout = ({routes}) => {
   const location = useLocation();
 
   useEffect(() => {

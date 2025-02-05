@@ -10,16 +10,19 @@
 
 @font-face {
     font-family: 'SuiGeneris';
+    font-display: swap;
     src: url('./fonts/sui_generis_rg.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Apple SD Gothic Neo';
+    font-display: swap;
     src: url('./fonts/AppleSDGothicNeoR.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'NanumGothic';
+    font-display: swap;
     src: url('./fonts/NanumGothic.otf') format('opentype');
 }
 

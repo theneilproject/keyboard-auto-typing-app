@@ -18,7 +18,7 @@ const PageTabContentLayout = ({routeName, contentName}) => {
     <ContentLayout>
       {routes?.map(({name, commands}) => {
         if (name === routeName) {
-          console.log('commands', commands);
+          // console.log('commands', commands);
 
           return commands?.commands?.map(({id, name, command, detail}) => {
             return <CommandButton
