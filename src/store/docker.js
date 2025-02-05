@@ -77,8 +77,20 @@ export const dockerCommands = [
       {
         id: 2127,
         name: 'compose logs',
-        command: 'docker compose logs',
+        command: 'docker compose logs ^{service}',
         detail: 'docker-compose로 컨테이너 로그를 확인합니다.'
+      },
+      {
+        id: 2128,
+        name: 'compose logs -f',
+        command: 'docker compose logs ^{service} -f',
+        detail: 'docker-compose로 컨테이너 로그를 실시간으로 확인합니다.'
+      },
+      {
+        id: 2129,
+        name: 'compose logs -f --tail',
+        command: 'docker compose logs ^{service} -f --tail=^{number}',
+        detail: 'docker-compose로 컨테이너 로그를 실시간으로 확인하며, 최근 {number}개의 로그만 보여줍니다.'
       }
     ]
   }
