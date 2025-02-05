@@ -45,22 +45,28 @@ export const dockerCommands = [
         detail: '컨테이너 내부에 접속합니다.'
       },
       {
-        id: 2124,
-        name: 'compose up',
-        command: 'docker compose up',
-        detail: 'docker-compose로 컨테이너를 실행+로깅 합니다.'
-      },
-      {
-        id: 21241,
-        name: 'compose up -d',
-        command: 'docker compose up -d',
-        detail: 'docker-compose로 컨테이너를 백그라운드로 실행합니다.'
-      },
-      {
         id: 21242,
-        name: 'compose up -d {service}',
+        name: 'compose up',
         command: 'docker compose up -d ^{service}',
         detail: 'docker-compose로 특정 서비스를 백그라운드로 실행합니다.'
+      },
+      {
+        id: 21243,
+        name: 'compose logs',
+        command: 'docker compose logs ^{service}',
+        detail: 'docker-compose로 특정 서비스의 로그를 확인합니다.'
+      },
+      {
+        id: 21244,
+        name: 'compose profile up',
+        command: 'docker compose --profile ^{profile} up -d',
+        detail: 'docker-compose로 프로파일을 백그라운드로 실행합니다.'
+      },
+      {
+        id: 21245,
+        name: 'compose profile down',
+        command: 'docker compose --profile ^{profile} down',
+        detail: 'docker-compose로 프로파일을 중지합니다.'
       },
       {
         id: 2125,

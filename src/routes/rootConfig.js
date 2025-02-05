@@ -3,6 +3,7 @@ import {gitCommands} from "@/store/git.js";
 import {dockerCommands} from "@/store/docker.js";
 import {windowsCommands} from "@/store/windows.js";
 import {tauriCommands} from "@/store/tauri.js";
+import {rhelCommands} from "@/store/rhel.js";
 
 export const routes = [
   {
@@ -36,5 +37,13 @@ export const routes = [
     fullPath: '/windows',
     component: lazy(() => import('@/pages/tab-windows/WindowsTab.jsx')),
     commands: windowsCommands.filter(w => w.name === 'task' && w.commands)[0]
+  },
+  {
+    id: 1125,
+    name: 'rhel',
+    path: 'rhel',
+    fullPath: '/rhel',
+    component: lazy(() => import('@/pages/tab-rhel/RhelTab.jsx')),
+    commands: rhelCommands.filter(w => w.name === 'fail2ban' && w.commands)[0]
   }
 ]
