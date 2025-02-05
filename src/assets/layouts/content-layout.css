@@ -1,4 +1,3 @@
 ﻿.content-layout {
-    margin-left: var(--kata-sidebar-width);
     min-width: var(--kata-content-min-width);
 }

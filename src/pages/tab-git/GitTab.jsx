@@ -1,9 +1,11 @@
-﻿import PageTabContentLayout from "@/components/custom/PageTabContentLayout.jsx";
+﻿import PageTabZustandLayout from "@/components/custom/PageTabZustandLayout.jsx";
 
 const GitTab = () => {
 
 
-  return (<PageTabContentLayout routeName="git" />);
+  return (
+    <PageTabZustandLayout name="git"/>
+  );
 };
 
 export default GitTab;

@@ -12,7 +12,8 @@ export const routes = [
     path: '',
     fullPath: '/',
     component: lazy(() => import('@/pages/tab-git/GitTab.jsx')),
-    commands: gitCommands.filter(g => g.name === 'git' && g.commands)[0]
+    commands: (sub) => gitCommands.filter(g => g.name === sub && g.commands)[0],
+    child: gitCommands
   },
   {
     id: 1122,
@@ -20,7 +21,8 @@ export const routes = [
     path: 'docker',
     fullPath: '/docker',
     component: lazy(() => import('@/pages/tab-docker/DockerTab.jsx')),
-    commands: dockerCommands.filter(d => d.name === 'docker' && d.commands)[0]
+    commands: (sub) => dockerCommands.filter(d => d.name === sub && d.commands)[0],
+    child: dockerCommands
   },
   {
     id: 1123,
@@ -28,7 +30,8 @@ export const routes = [
     path: 'tauri',
     fullPath: '/tauri',
     component: lazy(() => import('@/pages/tab-tauri/TauriTab.jsx')),
-    commands: tauriCommands.filter(t => t.name === 'tauri' && t.commands)[0]
+    commands: (sub) => tauriCommands.filter(t => t.name === sub && t.commands)[0],
+    child: tauriCommands
   },
   {
     id: 1124,
@@ -36,7 +39,8 @@ export const routes = [
     path: 'windows',
     fullPath: '/windows',
     component: lazy(() => import('@/pages/tab-windows/WindowsTab.jsx')),
-    commands: windowsCommands.filter(w => w.name === 'task' && w.commands)[0]
+    commands: (sub) => windowsCommands.filter(w => w.name === sub && w.commands)[0],
+    child: windowsCommands
   },
   {
     id: 1125,
@@ -44,6 +48,7 @@ export const routes = [
     path: 'rhel',
     fullPath: '/rhel',
     component: lazy(() => import('@/pages/tab-rhel/RhelTab.jsx')),
-    commands: rhelCommands.filter(w => w.name === 'fail2ban' && w.commands)[0]
+    commands: (sub) => rhelCommands.filter(w => w.name === sub && w.commands)[0],
+    child: rhelCommands
   }
 ]

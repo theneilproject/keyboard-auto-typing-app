@@ -1,12 +1,25 @@
 ﻿/* 다크 모드 사이드바 스타일 */
 .left-sidebar-type-tab {
     position: fixed;
-    width: var(--kata-sidebar-width);               /* 사이드바 너비 (원하는 값으로 조절) */
+    /*width: var(--kata-sidebar-width);               !* 사이드바 너비 (원하는 값으로 조절) *!*/
     height: 100vh;                                  /* 사이드바 높이 (내부 스크롤 적용 영역) */
     background-color: #2c2c2c;                      /* 어두운 배경색 */
     border-right: 1px solid #444;
     color: #eee;
     font-family: 'Arial', sans-serif;
+    z-index: 100;
+
+    &.secondary-sidebar {
+        background-color: #505050;
+    }
+
+    &.secondary-sidebar .menu-button:hover {
+        background-color: #3a3a3a;
+    }
+
+    &.secondary-sidebar .menu-button.active-secondary {
+        background-color: #6e6e6e;
+    }
 
 
     .menu {

@@ -3,6 +3,7 @@ import {routes} from "@/routes/rootConfig.js";
 import CommandButton from "@/components/tokens/CommandButton.jsx";
 
 const PageTabContentLayout = ({routeName, contentName}) => {
+  if (!contentName) return;
   const runCommand = async (command) => {
     try {
       // console.log('command', command);
@@ -12,15 +13,15 @@ const PageTabContentLayout = ({routeName, contentName}) => {
   };
   
   // todo : 1. Enter 입력이 들어오면, 다음 Command가 자동 복사되도록 처리(다음 커맨드가 없으면 처리하지 않음)
-  // todo : 3. 같은 Command 내부에서도 서로 다른 Command를 구분해서 실행되도록 처리
 
   return (
     <ContentLayout>
       {routes?.map(({name, commands}) => {
         if (name === routeName) {
-          // console.log('commands', commands);
+          // console.log('commandssssss', commands(contentName));
+          // console.log('contentName', contentName);
 
-          return commands?.commands?.map(({id, name, command, detail}) => {
+          return commands(contentName)?.commands?.map(({id, name, command, detail}) => {
             return <CommandButton
               key={id}
               onClick={() => runCommand(name)}

@@ -1,8 +1,8 @@
-﻿import PageTabContentLayout from "@/components/custom/PageTabContentLayout.jsx";
+﻿import PageTabZustandLayout from "@/components/custom/PageTabZustandLayout.jsx";
 
 const DockerTab = () => {
   return (
-    <PageTabContentLayout routeName="docker" />
+    <PageTabZustandLayout name="docker"/>
   );
 };
 

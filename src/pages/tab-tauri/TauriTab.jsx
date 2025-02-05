@@ -1,8 +1,8 @@
-﻿import PageTabContentLayout from "@/components/custom/PageTabContentLayout.jsx";
+﻿import PageTabZustandLayout from "@/components/custom/PageTabZustandLayout.jsx";
 
 const TauriTab = () => {
   return (
-    <PageTabContentLayout routeName="tauri" />
+    <PageTabZustandLayout name="tauri"/>
   );
 };
 
