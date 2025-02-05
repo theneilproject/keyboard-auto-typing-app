@@ -1,9 +1,9 @@
 ﻿export const styles = {
   sidebar: {
     width: "6rem",
-    marginLeft: "8rem"
+    marginLeft: "7rem"
   },
   content: {
-    marginLeft: "14rem"
+    marginLeft: "13rem"
   }
 }
