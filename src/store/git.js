@@ -27,6 +27,18 @@
         detail: '커밋을 원격 저장소로 전송합니다.'
       },
       {
+        id: 21231,
+        name: 'push --set-upstream',
+        command: 'git push --set-upstream origin ^{branch}',
+        detail: '새 브랜치 커밋을 origin 원격저장소로 전송합니다.'
+      },
+      {
+        id: 21232,
+        name: 'push --set-upstream',
+        command: 'git push --set-upstream ^{remote} ^{branch}',
+        detail: '새 브랜치 커밋을 {remote} 원격저장소로 전송합니다.'
+      },
+      {
         id: 2124,
         name: 'pull',
         command: 'git pull',
