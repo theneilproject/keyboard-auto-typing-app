@@ -117,6 +117,12 @@
         detail: '사용자 정보를 설정합니다.'
       },
       {
+        id: 21361,
+        name: 'remote',
+        command: 'git remote add origin ^{url}',
+        detail: '원격 저장소를 추가합니다.'
+      },
+      {
         id: 2137,
         name: 'init',
         command: 'git init',
