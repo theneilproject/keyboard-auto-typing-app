@@ -127,6 +127,18 @@
         name: 'init',
         command: 'git init',
         detail: '새로운 저장소를 초기화합니다.'
+      },
+      {
+        id: 2138,
+        name: 'rm --cached',
+        command: 'git rm --cached -rf .',
+        detail: '스테이징 영역에서 파일을 제거합니다.'
+      },
+      {
+        id: 2139,
+        name: 'reset --refresh',
+        command: 'git reset --refresh',
+        detail: '스테이징 영역을 초기화합니다.'
       }
     ]
   }
