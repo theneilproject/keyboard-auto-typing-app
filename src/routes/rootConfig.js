@@ -4,6 +4,7 @@ import {dockerCommands} from "@/store/docker.js";
 import {windowsCommands} from "@/store/windows.js";
 import {tauriCommands} from "@/store/tauri.js";
 import {rhelCommands} from "@/store/rhel.js";
+import {dotnetCommands} from "@/store/dotnet.js";
 
 export const routes = [
   {
@@ -50,5 +51,14 @@ export const routes = [
     component: lazy(() => import('@/pages/tab-rhel/RhelTab.jsx')),
     commands: (sub) => rhelCommands.filter(w => w.name === sub && w.commands)[0],
     child: rhelCommands
+  },
+  {
+    id: 1126,
+    name: 'dotnet',
+    path: 'dotnet',
+    fullPath: '/dotnet',
+    component: lazy(() => import('@/pages/tab-dotnet/DotnetTab.jsx')),
+    commands: (sub) => dotnetCommands.filter(w => w.name === sub && w.commands)[0],
+    child: dotnetCommands
   }
 ]
