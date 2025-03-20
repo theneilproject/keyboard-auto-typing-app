@@ -69,6 +69,12 @@ export const dockerCommands = [
         detail: '볼륨 목록을 보여줍니다.'
       },
       {
+        id: 212311,
+        name: 'volume rm',
+        command: 'docker volume rm ^{volumeName}',
+        detail: '볼륨을 삭제합니다.'
+      },
+      {
         id: 212321,
         name: 'network ls',
         command: 'docker network ls',
@@ -79,6 +85,12 @@ export const dockerCommands = [
         name: 'network create',
         command: 'docker network create ^{networkName}',
         detail: '네트워크를 생성합니다.'
+      },
+      {
+        id: 212331,
+        name: 'network rm',
+        command: 'docker network rm ^{networkName}',
+        detail: '네트워크를 삭제합니다.'
       },
       {
         id: 2123211,
