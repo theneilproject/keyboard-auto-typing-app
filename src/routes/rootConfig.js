@@ -5,6 +5,7 @@ import {windowsCommands} from "@/store/windows.js";
 import {tauriCommands} from "@/store/tauri.js";
 import {rhelCommands} from "@/store/rhel.js";
 import {dotnetCommands} from "@/store/dotnet.js";
+import {ansibleCommands} from "@/store/ansible.js";
 
 export const routes = [
   {
@@ -60,5 +61,14 @@ export const routes = [
     component: lazy(() => import('@/pages/tab-dotnet/DotnetTab.jsx')),
     commands: (sub) => dotnetCommands.filter(w => w.name === sub && w.commands)[0],
     child: dotnetCommands
+  },
+  {
+    id: 1127,
+    name: 'ansible',
+    path: 'ansible',
+    fullPath: '/ansible',
+    component: lazy(() => import('@/pages/tab-ansible/AnsibleTab.jsx')),
+    commands: (sub) => ansibleCommands.filter(w => w.name === sub && w.commands)[0],
+    child: ansibleCommands
   }
 ]

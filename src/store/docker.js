@@ -105,6 +105,12 @@ export const dockerCommands = [
         detail: '컨테이너 내부에 접속합니다.'
       },
       {
+        id: 21261,
+        name: 'run exec',
+        command: 'docker run -it --entrypoint ^{imageName} /bin/bash',
+        detail: '이미지를 실행하고, 컨테이너 내부에 접속합니다.'
+      },
+      {
         id: 2127,
         name: 'system prune',
         command: 'docker system prune -a',
