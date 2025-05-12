@@ -66,7 +66,7 @@
       {
         id: 212412,
         name: 'extract private key',
-        command: 'openssl pkcs12 -in ^{certificate}.pfx -nocerts -out ^{private_key}.key -nodes',
+        command: 'openssl pkcs12 -in ^{certificate}.pfx -nocerts -out ^{privatekey}.key -nodes',
         detail: 'PFX 파일에서 개인 키를 추출합니다.'
       },
       {
