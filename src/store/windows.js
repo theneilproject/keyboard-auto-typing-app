@@ -53,5 +53,76 @@
         detail: 'Windows NAT Driver를 시작합니다.'
       }
     ]
+  },
+  {
+    name: 'openssl',
+    commands: [
+      {
+        id: 212411,
+        name: 'pfx to pem',
+        command: 'openssl pkcs12 -in ^{certificate}.pfx -out ^{certificate}.pem -nodes',
+        detail: 'PFX 인증서를 PEM 형식으로 변환합니다.'
+      },
+      {
+        id: 212412,
+        name: 'extract private key',
+        command: 'openssl pkcs12 -in ^{certificate}.pfx -nocerts -out ^{private_key}.key -nodes',
+        detail: 'PFX 파일에서 개인 키를 추출합니다.'
+      },
+      {
+        id: 212413,
+        name: 'pfx extract cert as pem',
+        command: 'openssl pkcs12 -in ^{certificate}.pfx -clcerts -nokeys -out ^{certificate}.pem',
+        detail: 'PFX 파일에서 인증서만 PEM 형식으로 추출합니다.'
+      },
+      {
+        id: 212414,
+        name: 'extract certificate',
+        command: 'openssl pkcs12 -in ^{certificate}.pfx -clcerts -nokeys -out ^{certificate}.crt',
+        detail: 'PFX 파일에서 인증서만 추출합니다.'
+      },
+      {
+        id: 212415,
+        name: 'create csr',
+        command: 'openssl req -new -key ^{keyfile}.key -out ^{certificate}.csr',
+        detail: '인증서 서명 요청(CSR)을 생성합니다.'
+      },
+      {
+        id: 212416,
+        name: 'crt to pem',
+        command: 'openssl x509 -in ^{certificate}.crt -out ^{certificate}.pem -outform PEM',
+        detail: 'CRT 인증서를 PEM 형식으로 변환합니다.'
+      },
+      {
+        id: 212417,
+        name: 'generate rsa key',
+        command: 'openssl genrsa -out ^{keyfile}.key 2048',
+        detail: '2048 비트 RSA 개인 키를 생성합니다.'
+      },
+      {
+        id: 212418,
+        name: 'generate random',
+        command: 'openssl rand -base64 ^{bytes}',
+        detail: '지정된 바이트 수만큼 base64로 인코딩된 난수를 생성합니다. JWT 시크릿 키로 사용 가능합니다.'
+      },
+      {
+        id: 212419,
+        name: 'generate jwt secret',
+        command: 'openssl rand -hex 32',
+        detail: 'JWT에 사용할 수 있는 32바이트(256비트) 길이의 16진수 시크릿 키를 생성합니다.'
+      },
+      {
+        id: 212420,
+        name: 'generate rsa for jwt',
+        command: 'openssl genrsa -out ^{jwt_private}.key 2048',
+        detail: 'JWT RS256 알고리즘에 사용할 수 있는 RSA 개인 키를 생성합니다.'
+      },
+      {
+        id: 212421,
+        name: 'extract public key for jwt',
+        command: 'openssl rsa -in ^{jwt_private}.key -pubout -out ^{jwt_public}.key',
+        detail: 'JWT 검증에 사용할 수 있는 RSA 공개 키를 개인 키에서 추출합니다.'
+      }
+    ]
   }
 ]
